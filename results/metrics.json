@@ -1,0 +1,55 @@
+{
+  "dataset": {
+    "corpus": "НКРЯ",
+    "total": 703,
+    "house": 649,
+    "other": 54,
+    "window_chars": 100
+  },
+  "train": {
+    "size": 452,
+    "house": 305,
+    "other": 147,
+    "synthetic": true
+  },
+  "valid": {
+    "size": 64,
+    "house": 44,
+    "other": 20
+  },
+  "model": {
+    "name": "SetFit (DeepPavlov/rubert-base-cased)",
+    "base_model": "DeepPavlov/rubert-base-cased",
+    "hyperparams": {
+      "max_seq_length": 256,
+      "num_epochs": 2,
+      "num_iterations": 16,
+      "batch_size": 16,
+      "seed": 42,
+      "threshold": 0.5,
+      "labels": {
+        "0": "HOUSE",
+        "1": "OTHER"
+      }
+    }
+  },
+  "results": {
+    "setfit_test": {
+      "total": 703,
+      "agree": 698,
+      "errors": 5,
+      "FP": 2,
+      "FN": 3,
+      "F1_OTHER": 0.9532710280373832,
+      "macro_F1": 0.9747109566668826
+    },
+    "final_annotations": {
+      "total": 703,
+      "agree": 703,
+      "errors": 0,
+      "fixed_by_rules": 5,
+      "broken_by_rules": 0,
+      "rule_fires": 5
+    }
+  }
+}

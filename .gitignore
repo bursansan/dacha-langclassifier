@@ -1,0 +1,33 @@
+# Модель (711 MB, качается с HF)
+model/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb.bak
+
+# Бэкапы
+*.bak
+*.tmp
+*.log
+
+# Виртуальные окружения
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Секреты
+.env
+.env.*
